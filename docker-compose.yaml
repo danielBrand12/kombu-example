@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  rabbitmq:
+    image: bitnami/rabbitmq:latest
+    environment:
+      - RABBITMQ_DISK_FREE_ABSOLUTE_LIMIT=1000000000
+    ports:
+      - 4369:4369
+      - 5672:5672
+      - 25672:25672
+      - 15672:15672
+    expose:
+      - 4369
+      - 5672
+      - 25672
+      - 15672
